@@ -1,10 +1,7 @@
 <?php
 include('1.html');
-implode(",", $_POST);
 $a = $_POST['a'];
 $b = $_POST['b'];
-//$a="Синтаксически значение немного значение";
-//$b="Синтаксически значение ";
 function getCommonWords($a, $b)
 {
     $arr1 = explode(" ", $a);
@@ -20,5 +17,4 @@ function getCommonWords($a, $b)
     }
     return $result;
 }
-
-var_dump( getCommonWords($a, $b));
+echo getCommonWords($a, $b);
