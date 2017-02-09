@@ -1,12 +1,9 @@
 <?php
-include('9.html');
+include_once ('9.1.php');
 
-$text = implode(" ", $_POST);
-/**
- * @param $text
- */
-function reverceWord($text)
+function reverceWord()
 {
+    $text = implode(" ", $_POST);
     $chars = preg_split('//', $text, -1, PREG_SPLIT_NO_EMPTY);
     krsort($chars);
     foreach ($chars as $key => $value) {
@@ -16,4 +13,4 @@ function reverceWord($text)
     return;
 }
 
-echo reverceWord($text);
+// reverceWord();
